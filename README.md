@@ -36,7 +36,7 @@ Country (Sri Lanka)
 - Translations are **not** machine-generated.
 - Data comes from authoritative Sri Lankan government sources (DCS + MOHA LIFe + verified overlays). See [`docs/data-sources.md`](docs/data-sources.md).
 
-> **Status:** First public NuGet version planned: **`0.1.0-preview.1`** (not yet published to NuGet.org). Data sources and provenance: [`DATA-NOTICE.md`](DATA-NOTICE.md).
+> **Status:** Public preview available on NuGet.org. The package is under active development, and feedback and contributions are welcome..
 
 ## Installation
 
