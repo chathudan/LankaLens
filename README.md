@@ -41,7 +41,7 @@ Country (Sri Lanka)
 ## Installation
 
 ```bash
-dotnet add package LankaLens.AdministrativeDivisions --version 0.1.0-preview.1
+dotnet add package LankaLens.AdministrativeDivisions
 ```
 
 (Use after the package is published to NuGet.org, or install from a local `artifacts/packages` feed during development.)
