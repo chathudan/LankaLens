@@ -4,17 +4,34 @@
   from a temporary console app (PackageReference only — no ProjectReference).
 #>
 param(
-  [string]$RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path,
-  [string]$PackageVersion = "0.1.0-preview.1"
+  [string]$RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
 )
 
 $ErrorActionPreference = "Stop"
 
 $packagesDir = Join-Path $RepoRoot "artifacts/packages"
-$nupkg = Join-Path $packagesDir "LankaLens.AdministrativeDivisions.$PackageVersion.nupkg"
-if (-not (Test-Path $nupkg)) {
-  throw "Package not found: $nupkg. Run 'dotnet pack' first."
+
+$package = Get-ChildItem $packagesDir `
+  -Filter "LankaLens.AdministrativeDivisions.*.nupkg" `
+  -ErrorAction SilentlyContinue |
+  Where-Object { $_.Name -notlike "*.snupkg" } |
+  Sort-Object LastWriteTime -Descending |
+  Select-Object -First 1
+
+if (-not $package) {
+  throw "LankaLens.AdministrativeDivisions package not found in '$packagesDir'. Run 'dotnet pack' first."
 }
+
+$nupkg = $package.FullName
+
+if ($package.BaseName -notmatch '^LankaLens\.AdministrativeDivisions\.(.+)$') {
+  throw "Unable to determine package version from '$($package.Name)'."
+}
+
+$PackageVersion = $Matches[1]
+
+Write-Host "Using package: $($package.Name)"
+Write-Host "Package version: $PackageVersion"
 
 $work = Join-Path ([System.IO.Path]::GetTempPath()) ("lankalens-smoke-" + [guid]::NewGuid().ToString("n"))
 New-Item -ItemType Directory -Path $work | Out-Null
