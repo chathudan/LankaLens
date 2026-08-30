@@ -10,8 +10,7 @@
     <WarningsAsErrors>$(WarningsAsErrors);CS1591</WarningsAsErrors>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 
-    <VersionPrefix>0.1.0</VersionPrefix>
-    <VersionSuffix>preview.2</VersionSuffix>
+    <VersionPrefix>1.0.0</VersionPrefix>
     <PackageId>LankaLens.AdministrativeDivisions</PackageId>
     <Title>LankaLens Administrative Divisions</Title>
     <Authors>Poorna Soysa</Authors>
@@ -30,29 +29,27 @@
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <PackageReleaseNotes>
-  LankaLens.AdministrativeDivisions 0.1.0-preview.2
+  LankaLens.AdministrativeDivisions 1.0.0
 
-  Changes in this preview:
-  - Added the official LankaLens NuGet package icon.
-  - Improved NuGet package metadata and presentation.
-  - Kept Poorna Soysa as the package author.
-  - No breaking changes to the public API.
-  - No changes to the administrative hierarchy or bundled dataset.
+  First stable release of LankaLens.AdministrativeDivisions.
 
-  Bundled administrative snapshot:
+  Included data:
   - 9 Provinces
   - 25 Districts
   - 340 Divisional Secretariat Divisions
   - 14,008 Grama Niladhari Divisions
-  - Complete English names
-  - Sinhala and Tamil names for all Provinces, Districts, and Divisional Secretariat Divisions
-  - Sinhala and Tamil names for 13,723 of 14,008 Grama Niladhari Divisions
+  - Complete English coverage
+  - Sinhala and Tamil names where authoritative values are available
 
-  Unverified Sinhala/Tamil GN names remain null rather than being machine-generated.
+  Features:
+  - Offline embedded administrative dataset
+  - Code-based lookups
+  - Province → District → DS → GN hierarchy navigation
+  - Multilingual search
+  - Thread-safe read-only API
+  - No database or external API required
 
-  The package continues to provide offline hierarchy navigation, code-based lookups, and multilingual search with no database or network dependency.
-
-  This is a prerelease version and the public API may still evolve before 1.0.0.
+  This release establishes the initial stable public API.
 </PackageReleaseNotes>
     <PackageOutputPath>$(RepoRoot)artifacts/packages/</PackageOutputPath>
     <IncludeSymbols>true</IncludeSymbols>

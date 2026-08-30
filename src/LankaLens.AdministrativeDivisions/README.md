@@ -17,7 +17,7 @@ Country (Sri Lanka)
 ## Installation
 
 ```bash
-dotnet add package LankaLens.AdministrativeDivisions --version 0.1.0-preview.1
+dotnet add package LankaLens.AdministrativeDivisions
 ```
 
 ## Quick start
