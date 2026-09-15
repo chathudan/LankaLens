@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- **BREAKING:** target framework moved from `net8.0` to `net10.0` across the solution
+  (library, DataBuilder, tests, samples). Package version bumped `1.0.0` → `2.0.0`
+  accordingly; the public API surface itself is unchanged. Consumers on .NET 8 or .NET 9
+  should stay on the `1.x` line. `global.json` now pins `10.0.100` with
+  `rollForward: latestMajor`, and CI (`ci.yml`, `publish.yml`) installs `10.0.x`.
+- Regenerated the API-compat baseline at `eng/api-compat/LankaLens.AdministrativeDivisions.2.0.0.nupkg`
+  (replacing the stale `0.1.0-preview.1` one) per `docs/versioning.md`'s documented process for an
+  intentional breaking change; `dotnet pack` confirms "APICompat ran successfully without finding
+  any breaking changes" against this new baseline.
+
 ### Added
 
 - DataBuilder `acquire-geo` and `build-geo` commands producing `data/generated/gnd-list-with-coordinates.csv`

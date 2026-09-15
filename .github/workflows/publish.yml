@@ -36,7 +36,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: "8.0.x"
+          dotnet-version: "10.0.x"
 
       - name: Restore
         run: dotnet restore LankaLens.sln
@@ -146,7 +146,7 @@ jobs:
             echo "Package missing DATA-NOTICE.md"
             exit 1
           fi
-          if [[ ! -f "$EXTRACT/lib/net8.0/${EXPECTED_ID}.dll" ]]; then
+          if [[ ! -f "$EXTRACT/lib/net10.0/${EXPECTED_ID}.dll" ]]; then
             echo "Package missing runtime DLL"
             exit 1
           fi
@@ -212,7 +212,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: "8.0.x"
+          dotnet-version: "10.0.x"
 
       - name: Pre-push confirmation dump
         shell: bash

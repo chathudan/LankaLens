@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <RootNamespace>LankaLens.AdministrativeDivisions</RootNamespace>
     <AssemblyName>LankaLens.AdministrativeDivisions</AssemblyName>
     <IsPackable>true</IsPackable>
@@ -10,7 +10,7 @@
     <WarningsAsErrors>$(WarningsAsErrors);CS1591</WarningsAsErrors>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 
-    <VersionPrefix>1.0.0</VersionPrefix>
+    <VersionPrefix>2.0.0</VersionPrefix>
     <PackageId>LankaLens.AdministrativeDivisions</PackageId>
     <Title>LankaLens Administrative Divisions</Title>
     <Authors>Poorna Soysa</Authors>
@@ -29,9 +29,11 @@
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <PackageReleaseNotes>
-  LankaLens.AdministrativeDivisions 1.0.0
+  LankaLens.AdministrativeDivisions 2.0.0
 
-  First stable release of LankaLens.AdministrativeDivisions.
+  BREAKING CHANGE: target framework moved from net8.0 to net10.0.
+  Consumers on .NET 8 or .NET 9 must stay on the 1.x line; the public
+  API surface itself is unchanged from 1.0.0.
 
   Included data:
   - 9 Provinces
@@ -48,8 +50,6 @@
   - Multilingual search
   - Thread-safe read-only API
   - No database or external API required
-
-  This release establishes the initial stable public API.
 </PackageReleaseNotes>
     <PackageOutputPath>$(RepoRoot)artifacts/packages/</PackageOutputPath>
     <IncludeSymbols>true</IncludeSymbols>
@@ -58,9 +58,19 @@
     <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
 
-  <!-- Baseline is optional until eng/api-compat package is committed after first pack. -->
-  <PropertyGroup Condition="Exists('$(RepoRoot)eng/api-compat/LankaLens.AdministrativeDivisions.0.1.0-preview.1.nupkg')">
-    <PackageValidationBaselinePath>$(RepoRoot)eng/api-compat/LankaLens.AdministrativeDivisions.0.1.0-preview.1.nupkg</PackageValidationBaselinePath>
+  <!--
+    Baseline reset for the 2.0.0 net10.0 retarget (see docs/versioning.md
+    "Approving an intentional breaking change" - regenerate-the-baseline path).
+    The prior baseline (0.1.0-preview.1, lib/net8.0) is deliberately not
+    referenced here: comparing a net10.0-only package against a net8.0-only
+    baseline would fail package validation on the TFM removal itself, which
+    is exactly the accepted, intentional break. Once eng/api-compat/
+    LankaLens.AdministrativeDivisions.2.0.0.nupkg is produced and committed,
+    this condition picks it up automatically and validation resumes guarding
+    against further, unintended API breaks from this new baseline forward.
+  -->
+  <PropertyGroup Condition="Exists('$(RepoRoot)eng/api-compat/LankaLens.AdministrativeDivisions.2.0.0.nupkg')">
+    <PackageValidationBaselinePath>$(RepoRoot)eng/api-compat/LankaLens.AdministrativeDivisions.2.0.0.nupkg</PackageValidationBaselinePath>
   </PropertyGroup>
 
  <ItemGroup>

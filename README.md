@@ -107,8 +107,8 @@ Full provenance: [`docs/data-sources.md`](docs/data-sources.md).
 
 ## Framework support
 
-- Current target: **.NET 8** (`net8.0`)
-- Kept on a modern TFM intentionally; `netstandard2.0` is not planned unless demand justifies compatibility packages or API compromises.
+- Current target: **.NET 10** (`net10.0`) as of `2.0.0`. Versions `1.x` target `net8.0`; stay on that line if you're on .NET 8 or .NET 9.
+- Kept on a single modern TFM intentionally; `netstandard2.0` is not planned unless demand justifies compatibility packages or API compromises.
 
 ## License
 

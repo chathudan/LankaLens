@@ -3,9 +3,16 @@
 Review date: 2026-08-16  
 Package: `LankaLens.AdministrativeDivisions`  
 Namespace: `LankaLens.AdministrativeDivisions`  
-Target framework: `net8.0`
+Target framework: `net8.0` (see addendum below — `2.0.0` moved to `net10.0`)
 
 This review documents the intentional public surface before the first public NuGet prerelease. Changes after this point should be deliberate and tracked by package validation.
+
+> **Addendum (2.0.0):** the target framework moved from `net8.0` to `net10.0`. This is a
+> deliberate, TFM-only breaking change tracked via the normal SemVer major bump and a
+> regenerated API-compat baseline (`docs/versioning.md`); the public type/member surface
+> analyzed below is otherwise unchanged. The `net8.0`-only reasoning in this document's
+> conclusion reflects the review's original date and is left as the historical record of
+> that decision, not current guidance.
 
 ## Expected public surface
 

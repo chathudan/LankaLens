@@ -21,7 +21,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: "8.0.x"
+          dotnet-version: "10.0.x"
 
       - name: Restore
         run: dotnet restore LankaLens.sln
@@ -62,12 +62,12 @@ jobs:
           Copy-Item $pkg.FullName (Join-Path $extractDir "package.zip")
           Expand-Archive (Join-Path $extractDir "package.zip") -DestinationPath $extractDir
 
-          $dll = Join-Path $extractDir "lib/net8.0/LankaLens.AdministrativeDivisions.dll"
+          $dll = Join-Path $extractDir "lib/net10.0/LankaLens.AdministrativeDivisions.dll"
           if (-not (Test-Path $dll)) {
-            throw "Package missing lib/net8.0/LankaLens.AdministrativeDivisions.dll: $($pkg.Name)"
+            throw "Package missing lib/net10.0/LankaLens.AdministrativeDivisions.dll: $($pkg.Name)"
           }
 
-          $xml = Join-Path $extractDir "lib/net8.0/LankaLens.AdministrativeDivisions.xml"
+          $xml = Join-Path $extractDir "lib/net10.0/LankaLens.AdministrativeDivisions.xml"
           if (-not (Test-Path $xml)) {
             throw "Package missing XML documentation: $($pkg.Name)"
           }
