@@ -1,0 +1,745 @@
+{
+  "description": "DCS Grama Niladhari divisions with no attributed NSDI polygon, plus NSDI polygons that no DCS code claimed. Resolve deliberately via data/mappings/geo-to-dcs.json.",
+  "unmatchedDcsCodes": [
+    {
+      "code": "3128005",
+      "english": "Weihena"
+    },
+    {
+      "code": "3128010",
+      "english": "Indurupathvila"
+    },
+    {
+      "code": "3128015",
+      "english": "Polgahavila"
+    },
+    {
+      "code": "3128020",
+      "english": "Kumbalamalahena"
+    },
+    {
+      "code": "3128025",
+      "english": "Ihala Lelwala"
+    },
+    {
+      "code": "3128030",
+      "english": "Pahala Lelwala"
+    },
+    {
+      "code": "3128035",
+      "english": "Kirindalahena"
+    },
+    {
+      "code": "3128040",
+      "english": "Kokawala"
+    },
+    {
+      "code": "3128045",
+      "english": "Panvila"
+    },
+    {
+      "code": "3128050",
+      "english": "Wanduramba"
+    },
+    {
+      "code": "3128055",
+      "english": "Gulugahakanda"
+    },
+    {
+      "code": "3135005",
+      "english": "Urawatta"
+    },
+    {
+      "code": "3135010",
+      "english": "Dewagoda West"
+    },
+    {
+      "code": "3135015",
+      "english": "Dewagoda East"
+    },
+    {
+      "code": "3135020",
+      "english": "Deldoowa"
+    },
+    {
+      "code": "3135025",
+      "english": "Idanthota"
+    },
+    {
+      "code": "3135030",
+      "english": "Kuleegoda West"
+    },
+    {
+      "code": "3135035",
+      "english": "Galagoda East"
+    },
+    {
+      "code": "3135040",
+      "english": "Galagoda West"
+    },
+    {
+      "code": "3135045",
+      "english": "Kuleegoda East"
+    },
+    {
+      "code": "3135050",
+      "english": "Wellabada"
+    },
+    {
+      "code": "3135055",
+      "english": "Usmudulawa"
+    },
+    {
+      "code": "3135060",
+      "english": "wenamulla"
+    },
+    {
+      "code": "3135065",
+      "english": "Dimbuldoowa"
+    },
+    {
+      "code": "3135070",
+      "english": "Andurangoda"
+    },
+    {
+      "code": "3135075",
+      "english": "Galdoowa"
+    },
+    {
+      "code": "3135080",
+      "english": "Akurala"
+    },
+    {
+      "code": "3135085",
+      "english": "Akurala North"
+    },
+    {
+      "code": "3135090",
+      "english": "Akurala South"
+    },
+    {
+      "code": "3135095",
+      "english": "Uduwaragoda North"
+    },
+    {
+      "code": "3135100",
+      "english": "Uduwaragoda South"
+    },
+    {
+      "code": "3135105",
+      "english": "Kahawa"
+    },
+    {
+      "code": "3135110",
+      "english": "Weragoda"
+    },
+    {
+      "code": "3135115",
+      "english": "Delmar Colony"
+    },
+    {
+      "code": "3135120",
+      "english": "Harannagala"
+    },
+    {
+      "code": "3135125",
+      "english": "Godagama South"
+    },
+    {
+      "code": "3135130",
+      "english": "Godagama North"
+    },
+    {
+      "code": "3135135",
+      "english": "Daluwathumulla"
+    },
+    {
+      "code": "4415095",
+      "english": "Kokuthoduvai South"
+    },
+    {
+      "code": "5104005",
+      "english": "Punanai East"
+    },
+    {
+      "code": "9119005",
+      "english": "Thanjanthenna"
+    },
+    {
+      "code": "9119010",
+      "english": "Kalthota"
+    },
+    {
+      "code": "9119015",
+      "english": "Uggalkalthota Left Bank South"
+    },
+    {
+      "code": "9119020",
+      "english": "Medabedda"
+    },
+    {
+      "code": "9119025",
+      "english": "Neluyaya"
+    },
+    {
+      "code": "9119030",
+      "english": "Uggalkalthota Left Bank Left"
+    },
+    {
+      "code": "9119035",
+      "english": "Welipathayaya"
+    },
+    {
+      "code": "9119040",
+      "english": "Kuragala"
+    },
+    {
+      "code": "9119045",
+      "english": "Molamura"
+    }
+  ],
+  "unusedGeoAdminCodes": [
+    "2209125",
+    "2209130",
+    "2209135",
+    "2209140",
+    "2209260",
+    "2224100",
+    "2224105",
+    "2224110",
+    "2224115",
+    "2224120",
+    "2224125",
+    "2224150",
+    "2224155",
+    "3127115",
+    "3127125",
+    "3127130",
+    "3127205",
+    "3127210",
+    "3127215",
+    "3127220",
+    "3127225",
+    "3127230",
+    "3127235",
+    "3127240",
+    "3136005",
+    "3136010",
+    "3136015",
+    "3136020",
+    "3136025",
+    "3136030",
+    "3136035",
+    "3136040",
+    "3136045",
+    "3136050",
+    "3136055",
+    "3136060",
+    "3136065",
+    "3136070",
+    "3136075",
+    "3136080",
+    "3136085",
+    "3136090",
+    "3136095",
+    "3136100",
+    "3136105",
+    "3136110",
+    "3136115",
+    "3136120",
+    "3136125",
+    "3136130",
+    "3136135",
+    "9118060",
+    "9118065",
+    "9118070",
+    "9118075",
+    "9118080",
+    "9118085",
+    "9118090",
+    "9118095",
+    "9118100"
+  ],
+  "conflicts": [
+    {
+      "code": "2203110",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 2203110 'Puwakpitiya', but 'Silwathgama' is uniquely NSDI 2203145 within DS block 2203; attached the name-matched polygon instead."
+    },
+    {
+      "code": "2203145",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 2203145 'Silwathgama', but 'Palu Hombawa' is uniquely NSDI 2203155 within DS block 2203; attached the name-matched polygon instead."
+    },
+    {
+      "code": "2203150",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 2203150 'Weragalawatta', but 'Dambawatawana' is uniquely NSDI 2203160 within DS block 2203; attached the name-matched polygon instead."
+    },
+    {
+      "code": "2203155",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 2203155 'Palu Hombawa', but 'Puwakpitiya' is uniquely NSDI 2203110 within DS block 2203; attached the name-matched polygon instead."
+    },
+    {
+      "code": "2203160",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 2203160 'Dambawatawana', but 'Weragalawatta' is uniquely NSDI 2203150 within DS block 2203; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3127115",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3127115 'Weihena', but 'Mahalapitiya' is uniquely NSDI 3127120 within DS block 3127; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3127120",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3127120 'Mahalapitiya', but 'Pilagoda' is uniquely NSDI 3127140 within DS block 3127; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3127125",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3127125 'Polgahavila', but 'Thilaka Udagama' is uniquely NSDI 3127135 within DS block 3127; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3127130",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3127130 'Indurupathvila', but 'Ganegama East' is uniquely NSDI 3127145 within DS block 3127; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3127135",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3127135 'Thilaka Udagama', but 'Ganegama South' is uniquely NSDI 3127150 within DS block 3127; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3127140",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3127140 'Pilagoda', but 'Ganegama West' is uniquely NSDI 3127155 within DS block 3127; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3127145",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3127145 'Ganegama East', but 'Lelkada' is uniquely NSDI 3127160 within DS block 3127; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3127150",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3127150 'Ganegama South', but 'Ginimellagaha West' is uniquely NSDI 3127165 within DS block 3127; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3127155",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3127155 'Ganegama West', but 'Ginimellagaha East' is uniquely NSDI 3127170 within DS block 3127; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3127160",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3127160 'Lelkada', but 'Dodangoda' is uniquely NSDI 3127175 within DS block 3127; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3127165",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3127165 'Ginimellagaha West', but 'Keembiela' is uniquely NSDI 3127190 within DS block 3127; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3127170",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3127170 'Ginimellagaha East', but 'Kasideniya' is uniquely NSDI 3127200 within DS block 3127; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3127175",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3127175 'Dodangoda', but 'Warakapitikanda' is uniquely NSDI 3127250 within DS block 3127; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3127180",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3127180 'Thelikada', but 'Pahala Keembiya' is uniquely NSDI 3127245 within DS block 3127; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3127190",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3127190 'Keembiela', but 'Thelikada' is uniquely NSDI 3127180 within DS block 3127; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3127195",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3127195 'Kohombanadeniya', but 'Ginimellagaha South' is uniquely NSDI 3127270 within DS block 3127; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3127200",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3127200 'Kasideniya', but 'Pituwalgoda' is uniquely NSDI 3127275 within DS block 3127; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3127205",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3127205 'Kirindalahena', but 'Thelikada Nagaraya' is uniquely NSDI 3127280 within DS block 3127; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3127210",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3127210 'Pahala Lelwala', but 'Balagoda' is uniquely NSDI 3127265 within DS block 3127; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3127215",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3127215 'Ihala Lelwala', but 'Adurathvila' is uniquely NSDI 3127255 within DS block 3127; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3127220",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3127220 'Kumbalamalahena', but 'Kohombanadeniya' is uniquely NSDI 3127195 within DS block 3127; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3127225",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3127225 'Wanduramba', but 'Walpita South' is uniquely NSDI 3127260 within DS block 3127; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3127230",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3127230 'Gulugahakanda', but 'Gonapura' is uniquely NSDI 3127290 within DS block 3127; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3127235",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3127235 'Panvila', but 'Horagampita Central' is uniquely NSDI 3127285 within DS block 3127; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3127240",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3127240 'Kokawala', but 'Horagampita' is uniquely NSDI 3127295 within DS block 3127; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3136005",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3136005 'Urawatta', but 'Wellawatta' is uniquely NSDI 3136195 within DS block 3136; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3136010",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3136010 'Dewagoda West', but 'Nakanda' is uniquely NSDI 3136220 within DS block 3136; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3136015",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3136015 'Dewagoda East', but 'Hikkaduwa Central' is uniquely NSDI 3136225 within DS block 3136; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3136020",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3136020 'Deldoowa', but 'Hikkaduwa West' is uniquely NSDI 3136215 within DS block 3136; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3136025",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3136025 'Idanthota', but 'Hikkaduwa Nagarikaya' is uniquely NSDI 3136200 within DS block 3136; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3136030",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3136030 'Kuleegoda West', but 'Wavulagoda West' is uniquely NSDI 3136205 within DS block 3136; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3136035",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3136035 'Galagoda East', but 'Wavulagoda East' is uniquely NSDI 3136210 within DS block 3136; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3136040",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3136040 'Galagoda West', but 'Nalagasdeniya' is uniquely NSDI 3136230 within DS block 3136; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3136045",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3136045 'Kuleegoda East', but 'Millagoda' is uniquely NSDI 3136235 within DS block 3136; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3136050",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3136050 'Wellabada', but 'Wewala' is uniquely NSDI 3136245 within DS block 3136; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3136055",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3136055 'Usmudulawa', but 'Pannamgoda' is uniquely NSDI 3136240 within DS block 3136; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3136060",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3136060 'Wenamulla', but 'Narigama Wellabada' is uniquely NSDI 3136250 within DS block 3136; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3136065",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3136065 'Dimbuldoowa', but 'Narigama' is uniquely NSDI 3136255 within DS block 3136; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3136070",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3136070 'Andurangoda', but 'Kuda Wewala' is uniquely NSDI 3136260 within DS block 3136; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3136075",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3136075 'Galdoowa', but 'Delgahadoowa' is uniquely NSDI 3136265 within DS block 3136; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3136080",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3136080 'Akurala', but 'Katukoliha' is uniquely NSDI 3136270 within DS block 3136; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3136085",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3136085 'Akurala North', but 'Thiranagama' is uniquely NSDI 3136275 within DS block 3136; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3136090",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3136090 'Akurala South', but 'Thiranagama Wellabada' is uniquely NSDI 3136280 within DS block 3136; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3136095",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3136095 'Uduwaragoda North', but 'Patuwatha' is uniquely NSDI 3136285 within DS block 3136; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3136100",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3136100 'Uduwaragoda South', but 'Gammaduwatta' is uniquely NSDI 3136290 within DS block 3136; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3136105",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3136105 'Kahawa', but 'Hennathota' is uniquely NSDI 3136295 within DS block 3136; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3136110",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3136110 'Weragoda', but 'Pinkanda' is uniquely NSDI 3136300 within DS block 3136; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3136115",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3136115 'Delmar Colony', but 'Handaudumulla' is uniquely NSDI 3136305 within DS block 3136; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3136120",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3136120 'Harannagala', but 'Dodandugoda' is uniquely NSDI 3136340 within DS block 3136; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3136125",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3136125 'Godagama South', but 'Modara Patuwatha' is uniquely NSDI 3136345 within DS block 3136; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3136130",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3136130 'Godagama North', but 'Dodandoowa' is uniquely NSDI 3136350 within DS block 3136; attached the name-matched polygon instead."
+    },
+    {
+      "code": "3136135",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 3136135 'Daluwathumulla', but 'Uduhalpitiya' is uniquely NSDI 3136355 within DS block 3136; attached the name-matched polygon instead."
+    },
+    {
+      "code": "5212200",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 5212200 'Uhana Thissapura East', but 'Uhana Thissapura West' is uniquely NSDI 5212205 within DS block 5212; attached the name-matched polygon instead."
+    },
+    {
+      "code": "5212205",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 5212205 'Uhana Thissapura West', but 'Uhana Thissapura East' is uniquely NSDI 5212200 within DS block 5212; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118060",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118060 'Thanjanthenna', but 'Rajawaka' is uniquely NSDI 9118105 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118065",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118065 'Kalthota', but 'Bowatta' is uniquely NSDI 9118110 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118070",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118070 'Uggalkalthota Left Bank South', but 'Vikiliya' is uniquely NSDI 9118115 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118075",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118075 'Medabedda', but 'Thotupalathenna' is uniquely NSDI 9118120 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118080",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118080 'Neluyaya', but 'Kirimetithenna' is uniquely NSDI 9118125 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118085",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118085 'Uggalkalthota Left Bank Left', but 'Dehigasthalawa' is uniquely NSDI 9118130 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118090",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118090 'Welipathayaya', but 'Balangoda Town' is uniquely NSDI 9118135 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118095",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118095 'Kuragala', but 'Balangoda' is uniquely NSDI 9118140 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118100",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118100 'Molamura', but 'Jahinkanda' is uniquely NSDI 9118145 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118105",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118105 'Rajawaka', but 'Meddekanda' is uniquely NSDI 9118150 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118110",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118110 'Bowatta', but 'Ellewatta' is uniquely NSDI 9118155 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118115",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118115 'Vikiliya', but 'Polwathugoda' is uniquely NSDI 9118160 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118120",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118120 'Thotupalathenna', but 'Durakanda' is uniquely NSDI 9118165 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118125",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118125 'Kirimetithenna', but 'Rassagala' is uniquely NSDI 9118170 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118130",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118130 'Dehigasthalawa', but 'Ampitiyawatta' is uniquely NSDI 9118175 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118135",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118135 'Balangoda Town', but 'Massenna' is uniquely NSDI 9118180 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118140",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118140 'Balangoda', but 'Pettigala' is uniquely NSDI 9118185 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118145",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118145 'Jahinkanda', but 'Pallekanda' is uniquely NSDI 9118190 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118150",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118150 'Meddekanda', but 'Ellepola' is uniquely NSDI 9118195 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118155",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118155 'Ellewatta', but 'Thalangama' is uniquely NSDI 9118200 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118160",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118160 'Polwathugoda', but 'Kumara Gama' is uniquely NSDI 9118205 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118165",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118165 'Durakanda', but 'Damahana' is uniquely NSDI 9118210 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118170",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118170 'Rassagala', but 'Godakumbura' is uniquely NSDI 9118230 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118175",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118175 'Ampitiyawatta', but 'Imbulamura' is uniquely NSDI 9118235 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118180",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118180 'Massenna', but 'Mahawalathenna' is uniquely NSDI 9118240 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118185",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118185 'Pettigala', but 'Theladiriya' is uniquely NSDI 9118245 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118190",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118190 'Pallekanda', but 'Mawela' is uniquely NSDI 9118250 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118195",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118195 'Ellepola', but 'Welage' is uniquely NSDI 9118255 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118200",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118200 'Thalangama', but 'Gawaranhena' is uniquely NSDI 9118260 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "9118205",
+      "issue": "CODE_NAME_REALIGNED",
+      "detail": "Code match pointed at NSDI 9118205 'Kumara Gama', but 'Horaketiya' is uniquely NSDI 9118265 within DS block 9118; attached the name-matched polygon instead."
+    },
+    {
+      "code": "2302020",
+      "issue": "MAPPED_NAME_DISAGREEMENT",
+      "detail": "Mapped NSDI 2303020 English name 'Dambagalla' differs from DCS 'Dambagolla'."
+    },
+    {
+      "code": "2307560",
+      "issue": "MAPPED_NAME_DISAGREEMENT",
+      "detail": "Mapped NSDI 2306560 English name 'Merrygoll' differs from DCS 'Merrygold'."
+    },
+    {
+      "code": "2313085",
+      "issue": "MAPPED_NAME_DISAGREEMENT",
+      "detail": "Mapped NSDI 2312085 English name 'Bearwell' differs from DCS 'Barewell'."
+    },
+    {
+      "code": "2313340",
+      "issue": "MAPPED_NAME_DISAGREEMENT",
+      "detail": "Mapped NSDI 2312340 English name 'Albion' differs from DCS 'Albian'."
+    },
+    {
+      "code": "2314235",
+      "issue": "MAPPED_NAME_DISAGREEMENT",
+      "detail": "Mapped NSDI 2315235 English name 'Injuster' differs from DCS 'Injustry'."
+    },
+    {
+      "code": "2314245",
+      "issue": "MAPPED_NAME_DISAGREEMENT",
+      "detail": "Mapped NSDI 2315245 English name 'Newvalleygama' differs from DCS 'New Weligama'."
+    },
+    {
+      "code": "2314275",
+      "issue": "MAPPED_NAME_DISAGREEMENT",
+      "detail": "Mapped NSDI 2315275 English name 'Mocha' differs from DCS 'Moca'."
+    }
+  ]
+}

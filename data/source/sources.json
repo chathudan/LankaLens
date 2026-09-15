@@ -45,6 +45,22 @@
       "reportIdentifier": "POST /lifecode/views/rpt_gn_list.php (per district)",
       "purpose": "Authoritative Sinhala/Tamil administrative names for DCS codes joinable via LIFe → GND_UID (national validation incomplete for recoded DS/GN units)",
       "notes": "No published source date on the LIFe UI or GN reports. Raw HTML is gitignored. Reproduce with: dotnet run --project tools/LankaLens.DataBuilder -- acquire-moha. DataBuilder validate/build never fetch live MOHA."
+    },
+    {
+      "id": "nsdi-gnd-boundaries",
+      "organization": "National Spatial Data Infrastructure (NSDI), Sri Lanka",
+      "title": "Boundaries — Grama Niladhari Division polygon layer",
+      "url": "https://gisapps.nsdi.gov.lk/server/rest/services/Srilanka/Boundaries/MapServer/1/query",
+      "pageUrl": "https://gisapps.nsdi.gov.lk/server/rest/services/Srilanka/Boundaries/MapServer/1",
+      "retrievedDate": "2026-09-15",
+      "originalServerFileName": "MapServer/1/query",
+      "fileName": "nsdi-boundaries/manifest.json",
+      "sha256": "AEF7543236AE0DBC5A20505C9EAE1467A49BD772B032BDA6DE586FBDD5EDB867",
+      "byteLength": 31415783,
+      "acquisitionMechanism": "Official ArcGIS REST query (GET /query?f=geojson) paginated by resultOffset at maxRecordCount 1000",
+      "reportIdentifier": "GET /Srilanka/Boundaries/MapServer/1/query (paginated by resultOffset)",
+      "purpose": "Grama Niladhari polygon geometry for derived coordinates, joinable to DCS codes via the admin_code attribute",
+      "notes": "admin_code carries the DCS GND_UID layout (province+district+DS+GN); gnd_census_code is null throughout and is not used. Polygons are year_created 2017, satellite-traced, so derived coordinates are approximate and are not survey-grade. Redistribution terms are not stated on the layer page — coordinates are emitted to data/generated only and are not bundled into the NuGet package. Raw GeoJSON is gitignored. Reproduce with: dotnet run --project tools/LankaLens.DataBuilder -- acquire-geo. DataBuilder build-geo never fetches live NSDI."
     }
   ]
 }

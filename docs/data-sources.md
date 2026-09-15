@@ -20,6 +20,20 @@ LankaLens is an independent open-source project. It is not affiliated with or en
 | English names | DCS |
 | Sinhala names | MOHA LIFe Location Codes, confirmed MOHA→DCS mappings, and verified authoritative overlays |
 | Tamil names | MOHA LIFe Location Codes, confirmed MOHA→DCS mappings, and verified authoritative overlays |
+| Coordinates (derived, **not packaged**) | NSDI Boundaries GN polygon layer, joined on `admin_code`, via confirmed geo→DCS mappings |
+
+### Coordinates are a derived side output, not part of the package
+
+Grama Niladhari coordinates are generated into [`data/generated/gnd-list-with-coordinates.csv`](../data/generated/gnd-list-with-coordinates.csv)
+and are **not** embedded in `LankaLens.AdministrativeDivisions`. They are deliberately kept out of the
+NuGet package because NSDI states no redistribution terms, and because the polygons are `year_created`
+2017 satellite tracings rather than survey data — the derived points are approximate and must not be
+presented as authoritative boundaries or survey-grade positions.
+
+The join never uses names to create a match. It keys on the NSDI `admin_code` attribute, which carries
+the DCS `GND_UID` layout; residual divisions are resolved only through evidenced entries in
+`data/mappings/geo-to-dcs.json`, and anything unresolved is emitted with empty coordinate columns
+rather than a guess.
 
 Because multiple authoritative sources contribute fields, public `DatasetMetadata` remains concise and describes the multi-source snapshot without implying a single organization supplied every field. Full provenance lives here and in `data/source/sources.json`.
 
