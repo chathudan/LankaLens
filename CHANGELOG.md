@@ -29,6 +29,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   to the same named division, which a code-only join attaches to the wrong polygon
 - `scripts/verify-coordinates-osm.py` — independent OpenStreetMap cross-check of generated coordinates
   (verification only; no OSM data is imported)
+- Samples (`LankaLens.Sample.Console`, `LankaLens.Sample.WebApi`) now demonstrate joining a Grama
+  Niladhari code to its derived coordinate, via a small `GnCoordinateLookup` reading the
+  DataBuilder-generated `gnd-list-with-coordinates.csv` (linked into each sample's output, not
+  duplicated). This does **not** add coordinates to the package API — see the "derived side
+  output" note above. The WebApi sample gains `GET /gramaniladhari/{code}` (GN record plus
+  `location`, `null` when unmatched) and `GET /districts/{code}/gramaniladhari` (all GN divisions
+  in a district with their coordinates).
 
 ### Changed
 
