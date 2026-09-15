@@ -7,6 +7,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- DataBuilder `acquire-geo` and `build-geo` commands producing `data/generated/gnd-list-with-coordinates.csv`
+  — the DCS GNDList rows with latitude/longitude, centroid, bounding box, and area appended
+- NSDI Grama Niladhari boundary layer as a provenance-tracked source, joined to DCS codes on `admin_code`
+- Confirmed NSDI→DCS recode mappings in `data/mappings/geo-to-dcs.json` (5 DS recodes, 70 GN-level)
+- Within-DS-block name realignment: corrects 89 divisions where DCS and NSDI assign different codes
+  to the same named division, which a code-only join attaches to the wrong polygon
+- `scripts/verify-coordinates-osm.py` — independent OpenStreetMap cross-check of generated coordinates
+  (verification only; no OSM data is imported)
+
+### Changed
+
+- Corrected the NSDI assessment in `docs/multilingual-source-analysis.md` §F: the layer *is* joinable
+  to DCS codes via `admin_code` (the earlier "not production-ready" finding examined `gnd_census_code`,
+  which is null throughout). The layer remains unsuitable as a multilingual authority.
+
+### Note
+
+- Coordinates are a derived side output only. They are **not** embedded in the NuGet package, and the
+  public API is unchanged — no new types, members, or behaviour.
+
 ### Changed
 
 - Removed the permission-based NuGet publication gate (DCS/MOHA written permission is no longer required before publish); technical release gates remain

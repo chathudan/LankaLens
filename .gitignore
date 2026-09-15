@@ -68,6 +68,10 @@ data/source/moha-life/reports/
 data/source/moha-life/manifest.json
 data/source/*.html
 
+## NSDI boundary snapshots (redistribution terms not stated; commit provenance only)
+data/source/nsdi-boundaries/pages/
+data/source/nsdi-boundaries/manifest.json
+
 ## Rider / JetBrains
 *.DotSettings.user
 

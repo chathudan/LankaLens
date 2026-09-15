@@ -36,6 +36,8 @@ internal static class CommandLine
                 "validate" => RunValidate(paths),
                 "build" => RunBuild(paths),
                 "acquire-moha" => RunAcquireMoha(paths, options.Force, options.DelayMs).GetAwaiter().GetResult(),
+                "acquire-geo" => RunAcquireGeo(paths, options.Force, options.DelayMs).GetAwaiter().GetResult(),
+                "build-geo" => RunBuildGeo(paths),
                 _ => UnknownCommand(command)
             };
         }
@@ -179,6 +181,85 @@ internal static class CommandLine
         SourceCatalogLoader.Save(sourceDirectory, catalog);
     }
 
+    private static async Task<int> RunAcquireGeo(PipelinePaths paths, bool force, int delayMs)
+    {
+        Directory.CreateDirectory(paths.SourceDirectory);
+        var delay = TimeSpan.FromMilliseconds(Math.Max(500, delayMs));
+        using var client = NsdiBoundaryClient.Create(delay, Console.Out);
+        var manifest = await client.AcquireNationalSnapshotAsync(
+            paths.SourceDirectory,
+            force,
+            NsdiBoundaryClient.DefaultMaxAllowableOffset,
+            CancellationToken.None).ConfigureAwait(false);
+
+        UpsertGeoSourceEntry(paths.SourceDirectory, manifest);
+        Console.WriteLine("Updated data/source/sources.json with NSDI boundary provenance.");
+        Console.WriteLine($"Retrieved date: {manifest.RetrievedDate}");
+        return 0;
+    }
+
+    private static void UpsertGeoSourceEntry(string sourceDirectory, NsdiSnapshotManifest manifest)
+    {
+        var catalog = SourceCatalogLoader.Load(sourceDirectory);
+        var existing = catalog.Sources.FirstOrDefault(s => s.Id == GeoDcsJoiner.GeoSourceId);
+        if (existing is null)
+        {
+            existing = new SourceEntry { Id = GeoDcsJoiner.GeoSourceId };
+            catalog.Sources.Add(existing);
+        }
+
+        existing.Organization = "National Spatial Data Infrastructure (NSDI), Sri Lanka";
+        existing.Title = "Boundaries — Grama Niladhari Division polygon layer";
+        existing.Url = NsdiBoundaryClient.ServiceUrl + "/query";
+        existing.PageUrl = NsdiBoundaryClient.ServiceUrl;
+        existing.RetrievedDate = manifest.RetrievedDate;
+        existing.PublishedOrUpdatedDate = manifest.SourceDate;
+        existing.OriginalServerFileName = "MapServer/1/query";
+        existing.FileName = "nsdi-boundaries/manifest.json";
+        existing.Sha256 = manifest.CombinedSha256;
+        existing.ByteLength = manifest.CombinedByteLength;
+        existing.AcquisitionMechanism = manifest.AcquisitionMechanism;
+        existing.ReportIdentifier = "GET /Srilanka/Boundaries/MapServer/1/query (paginated by resultOffset)";
+        existing.Purpose =
+            "Grama Niladhari polygon geometry for derived coordinates, joinable to DCS codes via the admin_code attribute";
+        existing.Notes =
+            "admin_code carries the DCS GND_UID layout (province+district+DS+GN); gnd_census_code is null "
+            + "throughout and is not used. Polygons are year_created 2017, satellite-traced, so derived "
+            + "coordinates are approximate and are not survey-grade. Redistribution terms are not stated on "
+            + "the layer page — coordinates are emitted to data/generated only and are not bundled into the "
+            + "NuGet package. Raw GeoJSON is gitignored. Reproduce with: dotnet run --project "
+            + "tools/LankaLens.DataBuilder -- acquire-geo. DataBuilder build-geo never fetches live NSDI.";
+        SourceCatalogLoader.Save(sourceDirectory, catalog);
+    }
+
+    private static int RunBuildGeo(PipelinePaths paths)
+    {
+        var result = GeoBuildPipeline.Run(paths);
+        var s = result.Join.Summary;
+        var coverage = s.DcsGramaNiladhariDivisions == 0
+            ? 0
+            : 100.0 * s.Matched / s.DcsGramaNiladhariDivisions;
+
+        Console.WriteLine("LankaLens DataBuilder — coordinate enrichment");
+        Console.WriteLine($"  NSDI snapshot retrieved: {result.Manifest.RetrievedDate}");
+        Console.WriteLine($"  NSDI features: {s.GeoFeatures} ({s.GeoFeaturesWithJoinableCode} joinable)");
+        Console.WriteLine($"  DCS GN divisions: {s.DcsGramaNiladhariDivisions}");
+        Console.WriteLine($"  Matched by code: {s.MatchedByCode}");
+        Console.WriteLine($"  Matched by DS recode: {s.MatchedByDsRecode}");
+        Console.WriteLine($"  Matched by GN mapping: {s.MatchedByGnMapping}");
+        Console.WriteLine($"  Realigned by name within DS block: {s.MatchedByNameRealignment}");
+        Console.WriteLine($"  Confirmed mappings applied: {result.MappingsApplied}");
+        Console.WriteLine($"  Unmatched: {s.Unmatched}");
+        Console.WriteLine($"  Unused NSDI features: {s.GeoUnused}");
+        Console.WriteLine($"  English-name disagreements: {s.EnglishNameDisagreements}");
+        Console.WriteLine($"  Centroid outside polygon: {s.CentroidOutsidePolygon}");
+        Console.WriteLine($"  Conflicts: {result.Join.Conflicts.Count}");
+        Console.WriteLine(
+            $"  Coverage: {coverage.ToString("F2", System.Globalization.CultureInfo.InvariantCulture)}%");
+        Console.WriteLine($"  Wrote: {Path.GetFileName(result.CsvPath)}");
+        return 0;
+    }
+
     private static void PrintMohaSummary(PipelineResult result)
     {
         if (result.MohaJoin is null)
@@ -225,6 +306,8 @@ internal static class CommandLine
         Console.WriteLine("  validate      Parse, normalize, and validate without writing production JSON");
         Console.WriteLine("  build         Validate and write canonical JSON only when valid");
         Console.WriteLine("  acquire-moha  Download/cache official MOHA LIFe GN reports (rate-limited)");
+        Console.WriteLine("  acquire-geo   Download/cache official NSDI GN boundary polygons (rate-limited)");
+        Console.WriteLine("  build-geo     Join cached NSDI geometry to DCS codes and write the coordinate CSV");
         Console.WriteLine();
         Console.WriteLine("Options:");
         Console.WriteLine("  --source-dir <path>      Directory containing sources.json and workbooks");

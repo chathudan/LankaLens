@@ -151,13 +151,25 @@
 | English available? | Yes (`gnd_name`, `gnd_name_census`) |
 | Sinhala available? | Partial — `gnd_name_gazetted` observed in Sinhala even for Jaffna sample features |
 | Tamil available? | **No dedicated Tamil name field** in layer schema |
-| Official codes available? | Schema includes `gnd_census_code` etc.; **sample queries returned null census codes** |
-| Current date/version? | Live service; feature count **14,051** vs DCS **14,008** |
+| Official codes available? | Yes — via `admin_code` (see correction below). `gnd_census_code` is null throughout and is **not** usable. |
+| Current date/version? | Live service; feature count **14,051** vs DCS **14,008**; polygons carry `year_created` 2017 |
 | Machine readable? | Yes (ArcGIS REST JSON / geoJSON; maxRecordCount 1000) |
 | Downloadable? | Query/export via REST (paginated) |
 | Coverage | Near-national polygons; **+43 features vs DCS**; unsafe as sole multilingual authority |
-| Matching strategy | Prefer census code when populated; otherwise hierarchy + English — **GN name-only matching forbidden**. Currently census codes null in samples → **not production-ready for join**. |
+| Matching strategy | Join on `admin_code`; residuals only via confirmed mappings — **GN name-only matching forbidden** |
 | Terms/licensing notes | Government GIS service; redistribution terms not clearly stated on layer page |
+
+> **Correction (2026-09-15).** The original assessment concluded "not production-ready for join" after
+> observing null `gnd_census_code` values. That conclusion was wrong: the layer carries the census
+> identifier in a differently named field, **`admin_code`**, which uses the same seven-digit layout as
+> the DCS `GND_UID` (province + district + two-digit DS + three-digit GN). Joining on `admin_code`
+> matches **13,656 of 14,008** DCS Grama Niladhari divisions (97.5%) with no name matching at all;
+> confirmed DS- and GN-level recode mappings raise this to **13,959 (99.65%)**.
+>
+> This remains unsuitable as a **multilingual** authority — the layer still has no Tamil name field,
+> and `gnd_name_gazetted` is Sinhala even in Tamil-majority areas, exactly as recorded above. The
+> correction applies only to the layer's usefulness for **geometry**. See
+> [`geo-coverage-report.md`](../data/generated/geo-coverage-report.md) for the current join result.
 
 ---
 

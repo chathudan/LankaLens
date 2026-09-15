@@ -58,6 +58,16 @@ internal sealed record PipelinePaths(
 
     public string FinalGapResolutionMarkdownPath =>
         Path.Combine(GeneratedDirectory, "final-gap-resolution-report.md");
+
+    /// <summary>DCS GNDList rows with attributed coordinates appended.</summary>
+    public string GeoEnrichedCsvPath =>
+        Path.Combine(GeneratedDirectory, "gnd-list-with-coordinates.csv");
+
+    public string GeoCoverageMarkdownPath =>
+        Path.Combine(GeneratedDirectory, "geo-coverage-report.md");
+
+    public string GeoGapsJsonPath =>
+        Path.Combine(GeneratedDirectory, "unresolved-coordinate-gaps.json");
 }
 
 internal sealed record PipelineResult(

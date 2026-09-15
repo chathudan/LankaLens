@@ -22,9 +22,15 @@ internal static class MappingFileLoader
     /// Loads the mapping file. Missing file yields an empty confirmed set (valid).
     /// Malformed JSON throws.
     /// </summary>
-    public static IReadOnlyList<AdministrativeCodeMapping> Load(string mappingsDirectory)
+    public static IReadOnlyList<AdministrativeCodeMapping> Load(string mappingsDirectory) =>
+        LoadFrom(ResolvePath(mappingsDirectory));
+
+    /// <summary>
+    /// Loads any mapping file that uses the confirmed-code-mapping schema.
+    /// Missing file yields an empty confirmed set (valid); malformed JSON throws.
+    /// </summary>
+    public static IReadOnlyList<AdministrativeCodeMapping> LoadFrom(string path)
     {
-        var path = ResolvePath(mappingsDirectory);
         if (!File.Exists(path))
         {
             return [];
